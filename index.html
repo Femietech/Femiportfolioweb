@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Femie Motion-Rich Portfolio</title>
+    <title>Purple Motion Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -152,9 +152,8 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            align-items: baseline;
+            text-align: left
             
         }
 
@@ -225,6 +224,37 @@
             background: #A12568;
             
         }
+
+        .carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: none;
+  padding: 10px 0;
+}
+
+.carousel-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  height: 300px;
+  margin: 0 20px;
+  vertical-align: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+       
 
     
         
@@ -307,11 +337,38 @@
         </div>
     </section>
 
+
+ 
+    <div class="card">
+<div class="carousel">
+
+
+  <div class="carousel-track">
+    <img src="img2.jpg" alt="Logo 1">
+    <img src="img4.jpg" alt="Logo 2">
+    <img src="img3.jpg" alt="Logo 3">
+    <img src="img4.jpg" alt="Logo 4">
+    <img src="img2.jpg" alt="Logo 5">
+    <!-- Duplicate for seamless loop -->
+    <img src="img4.jpg" alt="Logo 1">
+    <img src="img2.jpg" alt="Logo 2">
+     <img src="img3.jpg" alt="Logo 1">
+    <img src="img4.jpg" alt="Logo 2">
+    <img src="img3.jpg" alt="Logo 3">
+    <img src="img4.jpg" alt="Logo 4">
+  </div>
+</div>
+</div>
+
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <div class="card">
-                <p>I'm a passionate full-stack developer with expertise in creating immersive digital experiences. 
+            <div class="card" style="display: flex; align-items: start; gap: 20px;padding: 20px;">
+                <div style="text-align: center;"><img class="card" src="myimage.jpg" alt="Me" style="width: 300px;
+                height: auto; border-radius: 10px; margin-left: 50px; margin-top: 2px;"></div>
+                <p style="display: flex; float: left;"></p>
+                <div style="display: flex; float: right;margin-top: -350px; margin-left: 300px
+                ;padding-left: 120px; padding-bottom: 100px; padding-right: 50px;"><p style="font-size: 1.2rem;">I'm a passionate front-end developer with expertise in creating immersive digital experiences. 
                     My focus is on 
                     combining functionality with 
                     stunning visual design to create websites that not only work <b style="color: #FEC260; font-size: 1.8rem;">beautifully</b> but also tell a story.
@@ -320,16 +377,11 @@
                      My enthusiasm for innovative <b style="font-size: 1.8rem; color: #c7006a;">design</b> fuels my mission to craft seamless, 
                      visually stunning digital experiences that don’t just look incredible but pulse with energy and purpose. 
                      With a sharp eye for detail and a relentless drive to stay ahead of the curve, I transform bold ideas into engaging, interactive realities. From fluid animations and intuitive interfaces to responsive, pixel-perfect layouts, I thrive on pushing creative and technical boundaries to deliver websites that captivate and inspire. Beyond coding, I’m dedicated to collaborating closely with clients, ensuring every project reflects their unique vision while elevating user experience to new heights. 
-                    Let’s ignite your ideas with creativity, code, and a touch of motion magic!.</p>
-            </div>
+                    Let’s ignite your ideas with creativity, code, and a touch of motion magic!.</p></div>
+            
+            
         </div>
     </section>
-    
-    <script type="text/javascript">
-    aclib.runAutoTag({
-        zoneId: 'jrvecr35x1',
-    });
-</script>
 
     <section id="blog">
         <h2 class="section-title">Blog</h2>
@@ -481,7 +533,16 @@
                 });
             });
         });
+        document.addEventListener('mousedown', function(e){
+            e.preventDefault
+        });
     </script>
+    
+    <script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 'jrvecr35x1',
+    });
+</script>
 
 </body>
 </html>
